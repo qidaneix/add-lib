@@ -1,6 +1,6 @@
 {
   "name": "@xiaodabao/add-lib",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "学习npm lib的生成！",
   "main": "lib/main.umd.js",
   "scripts": {
