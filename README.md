@@ -39,3 +39,5 @@
 5. 修改 package.json 的 main 字段为`"main": "lib/main.umd.js",`
 6. 由于不希望 lib 文件夹提交到 git 上，同时不希望 src、test 等文件文件夹提交到 npm 上，修改.gitignore 文件已经新增.npmignore 文件以满足我们的需求
 7. 执行`npm version patch`，升级一个补丁版本
+8. 到 add-use 文件夹重新安装@xiaodabao/add-lib，并尝试运行`node index.js`，报错`ReferenceError: window is not defined`
+9. 修改 webpack.config.js，增加`globalObject: "typeof self !== 'undefined' ? self : this"`，从新打包、发布

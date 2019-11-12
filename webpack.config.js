@@ -9,6 +9,7 @@ module.exports = {
     library: {
       root: "addLib"
     },
-    libraryTarget: "umd"
+    libraryTarget: "umd",
+    globalObject: "typeof self !== 'undefined' ? self : this"
   }
 };
