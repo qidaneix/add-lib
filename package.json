@@ -2,9 +2,10 @@
   "name": "@xiaodabao/add-lib",
   "version": "0.0.4",
   "description": "学习npm lib的生成！",
-  "main": "index.js",
+  "main": "lib/main.umd.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   "homepage": "https://github.com/qidaneix/add-lib#readme",
   "devDependencies": {
     "jest": "^24.9.0",
-    "webpack": "^4.41.2"
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
   }
 }

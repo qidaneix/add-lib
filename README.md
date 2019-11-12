@@ -30,4 +30,12 @@
 ## 让代码在 node 环境和浏览器环境都能运行
 
 想让代码既能 node 环境也能在浏览器环境运行（浏览器环境，这里只考虑 script 标签引入全局变量的情况，暂不考虑 webpack 引入的情况），其实只要给源码 index.js 加上 UMD 包裹就行了，但这样源码会不好看可读性低。所以决定使用构建工具，使用构建工具既可以选择打 UMD 通用包，一个包兼容两个环境；又可以分别打 commonjs 和 IIFE 两个包，分别在不同的环境运行。
-由于对 webpack 比对 rollup 熟悉，决定使用 webpack 打包
+由于对 webpack 比对 rollup 熟悉，决定使用 webpack 打包。
+
+1. 安装 webpack 以及 webpack-cli
+2. 移动 index.js 到 src 文件夹，移动 index.test.js 到 src 文件夹
+3. 新建配置文件 webpack.config.js，并编写内容
+4. 增加 package.json 命令`"build": "webpack"`，并运行命名，在 lib 文件夹生成 main.umd.js
+5. 修改 package.json 的 main 字段为`"main": "lib/main.umd.js",`
+6. 由于不希望 lib 文件夹提交到 git 上，同时不希望 src、test 等文件文件夹提交到 npm 上，修改.gitignore 文件已经新增.npmignore 文件以满足我们的需求
+7. 执行`npm version patch`，升级一个补丁版本

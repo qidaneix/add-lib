@@ -1,6 +1,7 @@
 .DS_Store
 node_modules
-/lib
+/src
+/test
 
 /tests/e2e/reports/
 selenium-debug.log
@@ -22,3 +23,7 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw?
+
+# config file
+.editorconfig
+webpack.config.js
